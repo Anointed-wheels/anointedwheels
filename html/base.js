@@ -13,7 +13,7 @@ setInterval(() => {
     else{
         i=0
     }
-    caller.src = `../images/${images[i]}`
+    caller.src = `${images[i]}`
 }, 5000);
 
 let btn = document.querySelector(".btn")
