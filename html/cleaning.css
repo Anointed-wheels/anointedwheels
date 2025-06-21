@@ -1,38 +1,38 @@
 @font-face {
   font-family: 'bungee';
-  src: url('../assets/fonts/bungee.ttf') ;
+  src: url('bungee.ttf') ;
 }
 @font-face {
   font-family: 'play';
-  src: url('../assets/fonts/play.ttf') ;
+  src: url('play.ttf') ;
 }
 @font-face {
   font-family: 'fred';
-  src: url('../assets/fonts/fredrick.ttf') ;
+  src: url('fredrick.ttf') ;
 }
 @font-face {
   font-family: 'boldon';
-  src: url('../assets/fonts/boldon.ttf');
+  src: url('boldon.ttf');
 }
 @font-face {
   font-family: 'winky';
-  src: url('../assets/fonts/winky.ttf');
+  src: url('winky.ttf');
 }
 @font-face {
   font-family: 'roboto';
-  src: url('../assets/fonts/roboto.ttf');
+  src: url('roboto.ttf');
 }
 @font-face {
   font-family: "nunito";
-  src: url("../assets/fonts/nunito.ttf");
+  src: url("nunito.ttf");
 }
 @font-face {
   font-family: "creep";
-  src: url("../assets/fonts/creep.ttf");
+  src: url("creep.ttf");
 }
 @font-face {
   font-family: "tages";
-  src: url("../assets/fonts/tages.ttf");
+  src: url("tages.ttf");
 }
 .cleaning-img{
   height: 90dvh;
@@ -533,35 +533,35 @@
   }
   @font-face {
       font-family: 'bungee';
-      src: url('../assets/fonts/bungee.ttf') ;
+      src: url('bungee.ttf') ;
   }
   @font-face {
       font-family: 'fred';
-      src: url('../assets/fonts/fredrick.ttf') ;
+      src: url('fredrick.ttf') ;
   }
   @font-face {
       font-family: 'boldon';
-      src: url('../assets/fonts/boldon.ttf');
+      src: url('boldon.ttf');
   }
   @font-face {
       font-family: 'winky';
-      src: url('../assets/fonts/winky.ttf');
+      src: url('winky.ttf');
   }
   @font-face {
       font-family: 'roboto';
-      src: url('../assets/fonts/roboto.ttf');
+      src: url('roboto.ttf');
   }
   @font-face {
       font-family: "nunito";
-      src: url("../assets/fonts/nunito.ttf");
+      src: url("nunito.ttf");
   }
   @font-face {
       font-family: "creep";
-      src: url("../assets/fonts/creep.ttf");
+      src: url("creep.ttf");
   }
   @font-face {
       font-family: "tages";
-      src: url("../assets/fonts/tages.ttf");
+      src: url("tages.ttf");
   }
   body{
       overflow-x: hidden;

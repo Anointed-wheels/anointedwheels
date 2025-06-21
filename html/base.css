@@ -5,35 +5,35 @@
 }
 @font-face {
     font-family: 'bungee';
-    src: url('../fonts/bungee.ttf') ;
+    src: url('bungee.ttf') ;
 }
 @font-face {
     font-family: 'fred';
-    src: url('../fonts/fredrick.ttf') ;
+    src: url('fredrick.ttf') ;
 }
 @font-face {
     font-family: 'boldon';
-    src: url('../fonts/boldon.ttf');
+    src: url('boldon.ttf');
 }
 @font-face {
     font-family: 'winky';
-    src: url('../fonts/winky.ttf');
+    src: url('winky.ttf');
 }
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto.ttf');
+    src: url('roboto.ttf');
 }
 @font-face {
     font-family: "nunito";
-    src: url("../fonts/nunito.ttf");
+    src: url("nunito.ttf");
 }
 @font-face {
     font-family: "creep";
-    src: url("../fonts/creep.ttf");
+    src: url("creep.ttf");
 }
 @font-face {
     font-family: "tages";
-    src: url("../fonts/tages.ttf");
+    src: url("tages.ttf");
 }
 body{
     overflow-x: hidden;
