@@ -104,7 +104,7 @@
   background-color: transparent;
   width: 20dvw;
   height: 45dvh;
-  perspective: 1000px; /* Creates the 3D effect */
+  perspective: 100dvw; /* Creates the 3D effect */
 }
 
 .flip-card-inner {
@@ -564,7 +564,8 @@
       src: url("tages.ttf");
   }
   body{
-      overflow-x: hidden;
+      overflow-x: none;
+
   }
   .top-nav{
     position: relative;
@@ -760,7 +761,7 @@
   background-color: transparent;
   width: 70dvw;
   height: 35dvh;
-  perspective: 1000px; /* Creates the 3D effect */
+  perspective: 100dvh; /* Creates the 3D effect */
 }
 .about-head p{
     font-size: 30px;
@@ -893,6 +894,9 @@
 #sort-2 {
   height: 100dvh;
 }
+.scene{
+  display: none;
+}
 .blue{
     margin: 7vh 0 2vh 7vw;
     color: #0077a2;
@@ -963,6 +967,7 @@
     display: grid;
     right: 0;
     top: 8dvh;
+    display: none;
   }
   .mobile-tags{
     width: 100%;
@@ -978,6 +983,16 @@
   }
   .navigation{
     height: 35vh;
+  }
+  .btn-what{
+    scale: 3;
+    position: fixed;
+    left: 6dvw;
+  }
+  .btn-phone{
+    scale: 3;
+    position: fixed;
+    left: 25dvw;
   }
 /* #title-holder{
   display: none;

@@ -261,7 +261,7 @@ body{
     z-index: 4;
     top: 0;
     left: 0;
-    width: 450px;
+    width: 45dvh;
     height: 45vh;
     background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
     content: "";
@@ -271,7 +271,7 @@ body{
     z-index: 4;
     top: 0;
     right: 0;
-    width: 450px;
+    width: 45dvh;
     height: 45vh;
     background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
 
@@ -284,7 +284,7 @@ body{
 }
 .gallery-slider img {
     height: 150px;
-    width: 150px;
+    width: 15dvw;
     margin: 80px 40px 0px 40px;
     border-radius: 20px;
 }
@@ -691,7 +691,7 @@ body{
       top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
-      perspective: 800px;
+      perspective: 60vw;
       z-index: 5;
       opacity: 0.6;
     }
