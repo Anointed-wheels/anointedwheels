@@ -96,27 +96,6 @@ const reveal = () => {
 window.addEventListener('scroll', reveal)
 
 
-const tumbs = () => {
-    var tumbItems = document.querySelectorAll('.tumbs');
-
-    for (var i = 0; i < tumbItems.length; i++) {
-        var windowheight = window.innerHeight;
-        var tumbtop = tumbItems[i].getBoundingClientRect().top;
-        var revealpoint = 50;
-
-        if (tumbtop < windowheight - revealpoint) {
-            tumbItems[i].classList.add('showAnim');
-        } else {
-            tumbItems[i].classList.remove('showAnim');
-        }
-    }
-};
-
-window.addEventListener('scroll', () => {
-    reveal();
-    tumbs(); // call both on scroll
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   const wheel = document.getElementById('wheel');
   let goingForward = true;
@@ -134,4 +113,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   setInterval(roll, 8000);
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.pop-on-scroll').forEach(el => {
+  observer.observe(el);
 });

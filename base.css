@@ -429,11 +429,13 @@ body{
 .footer-div{
     position: absolute;
     display: flex;
-    top: 10dvh;
+    /* top: 10dvh; */
     flex-wrap: wrap;
     justify-content: space-evenly;
     /* border: 2px solid white; */
     width: 100dvw;
+    height: 100%;
+    bottom: 0;
     
     
 }
@@ -768,7 +770,7 @@ body{
   margin: 0 2dvh;
 }
 .photos{
-  height: 137dvh;
+  height: 200dvh;
   width: 100dvw;
   background-color: white;
   display: flex;
@@ -777,7 +779,7 @@ body{
   /* background-color: #181414; */
 }
 .up-ways{
-  height: 37dvh;
+  height: 80dvh;
   width: 100dvw;
   /* background-color: #0077a2; */
   position: relative;
@@ -789,7 +791,7 @@ body{
 }
 .ombl{
   height: 100%;
-  width:30%;
+  width:29%;
   background-color: #151603;
   /* position: absolute; */
   /* margin: 3dvh; */
@@ -805,7 +807,7 @@ body{
 .down-ways{
   background-color: yellow;
   /* position: absolute; */
-  height: 42dvh;
+  height: 90dvh;
   width: 100%;
   border-radius: 30px;
 }
