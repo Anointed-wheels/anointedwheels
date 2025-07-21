@@ -586,7 +586,7 @@
     height: 20vh;
     font-size: clamp(0.5rem, 1vw, 0.5rem);
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .gallery-slider-after{
     /* position: absolute;
