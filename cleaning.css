@@ -1224,6 +1224,11 @@
   75%  { transform: rotate(3deg); }
   100% { transform: rotate(0deg); }
 }
+@keyframes bgPulse {
+  0%   { background: #ff5733; }  /* orange-red */
+  50%  { background: #3498db; }  /* blue */
+  100% { background: #f1c40f; }  /* yellow */
+}
 .btn-what button{
   animation: none;
   border: none;
@@ -1234,6 +1239,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 3dvw;
+  animation: bgPulse 3s infinite alternate;
 }
 .btn-phone button{
   animation: none;
@@ -1245,6 +1252,7 @@
   cursor: pointer;
   outline: none;
   box-shadow: none; 
+  animation: bgPulse 3s infinite alternate;
 }
 .footer{
     width: 100dvw;
