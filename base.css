@@ -522,9 +522,11 @@ body{
     margin: 10dvh 0 ;
 }
 
-/* .quality-service{
-    display: none;
-} */
+.quality-service{
+    /* display: none; */
+    background-color: #061001;
+    text-align: center;
+}
 
 .quality-background-image{
     position: relative;

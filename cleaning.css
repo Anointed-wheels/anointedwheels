@@ -601,6 +601,20 @@
     content: ""; */
     display: none;
 }
+.season{
+  /* background-color: yellow; */
+  height: 10dvh;
+  width: 30dvw;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 9999999999999999999999999999999999999999;
+}
+.season img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} 
 .gallery-slider img {
     height: 15dvh;
     width: 15dvh;
