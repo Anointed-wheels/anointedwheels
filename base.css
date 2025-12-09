@@ -204,6 +204,7 @@ body{
     height: 45vh;
     position: absolute;
     margin: 0 0;
+    background-color: #061001;
 }
 .trusted-text{
     color: #ffffff;
