@@ -46,6 +46,7 @@
   width: 100dvw;
   justify-content: center;
   align-content: center;
+  background-color: #1c312c;
 }
 .cleaning-overlay{
   position: absolute;
@@ -1363,4 +1364,7 @@
 .pop-on-scroll.visible {
   opacity: 1;
   transform: scale(1);
+}
+.ic3c23{
+    background-color: #1c312c;
 }
