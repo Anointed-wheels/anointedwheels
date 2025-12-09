@@ -1066,6 +1066,7 @@
     background-size:cover;  
     /* background-position:; */
     background-repeat:no-repeat;
+    margin-left: 0;
 }
 /* .nav-head img{
   height: 100%;
