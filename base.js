@@ -25,7 +25,7 @@ let tint = document.querySelector("#tint")
 let claim = document.querySelector("#claim")
 let drop = document.querySelector(".mobile-nav")
 let navup = document.querySelector(".nav-mobile-up")
-let navclean = document.querySelector(".nav-mobile-clean")
+// let navclean = document.querySelector(".nav-mobile-clean")
 let klin= document.querySelector(".cleaning-topics")
 
 navup.addEventListener('click', () => {
@@ -37,20 +37,20 @@ navup.addEventListener('click', () => {
     
 })
 
-navclean.addEventListener('click', () => {
-    klin.scrollIntoView({ behavior: 'smooth' });
-    klin.style.display="grid"
-    // waiting.classList.add("quality-service")
-  });
+// navclean.addEventListener('click', () => {
+//     klin.scrollIntoView({ behavior: 'smooth' });
+//     klin.style.display="grid"
+//     // waiting.classList.add("quality-service")
+//   });
 
-btn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    })
+// btn.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: 0,
+//         left: 0,
+//         behavior: "smooth"
+//     })
     
-})
+// })
 about.addEventListener('click', () => {
     here.scrollIntoView({ behavior: 'smooth' });
     here.style.display="grid"

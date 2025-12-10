@@ -12,6 +12,7 @@
         Harvesterken
     </title>
     <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="cleaning.css">
     <link rel="icon" type="image/png" href="favicon.ico">
@@ -19,7 +20,7 @@
     
 </head>
 <body>
-    <header class="top-nav">
+    <header class="top-nav" >
         <nav class="nav">
             <div >
                 <div class="tame">
@@ -37,7 +38,7 @@
                 <li>FAQ</li>
             </div>
             <div class="mobile-nav">
-                <div class="mobile-tags nav-mobile-up"><p>HOME</p></div>
+                <a href="index.html"><div class="mobile-tags nav-mobile-up"><p>HOME</p></div></a>
                 <div class="mobile-tags nav-mobile-clean"><p>CLEANING SERVICES</p></div>
                 <div class="mobile-tags"><p>PEST CONTROL</p></div>
                 <div class="mobile-tags"><p>OUR SERVICES</p></div>
@@ -56,7 +57,7 @@
     </header>
     <main>
         
-<section class="navigation">
+<section class="navigation" >
     <div class="overlay">
         <img src="" alt="">
     </div>
@@ -76,10 +77,8 @@
             <img id="hero" class="image" src="a.jpg" alt="images">
         </div>
     </section>
-    <div class="scene">
-                <div class="word-stack">
-                <!-- Stack 20 layers with small Z offset to simulate 3D depth -->
-                <!-- You can generate these layers dynamically if needed -->
+    <div class="scene" >
+            <div class="word-stack">
                 <span class="word-layer" style="transform: translateZ(-10px);">HARVESTERKEN</span>
                 <span class="word-layer" style="transform: translateZ(-9px);">HARVESTERKEN</span>
                 <span class="word-layer" style="transform: translateZ(-8px);">HARVESTERKEN</span>
@@ -101,14 +100,14 @@
                 <span class="word-layer" style="transform: translateZ(8px);">HARVESTERKEN</span>
                 <span class="word-layer" style="transform: translateZ(9px);">HARVESTERKEN</span>
                 <span class="word-layer" style="transform: translateZ(10px);">HARVESTERKEN</span>
-                </div>
             </div>
+    </div>
 </section>
 
 <section class="trusted ">
     <div class="gallery-slider-after"></div>
     <div id="me">
-        <img class="trusted-child " src="sv3.jpg" alt="">
+        <!-- <img class="trusted-child " src="sv3.jpg" alt=""> -->
     </div>
     <p class="trusted-text">OUR CLIENTS</p>
     <div class="gallery-container reveal">
@@ -223,7 +222,7 @@
             </div>  
         </section>
         
-        <img id="mints" src="lin.jpg" alt="quality-background-image">
+        <!-- <img id="mints" src="lin.jpg" alt="quality-background-image"> -->
     </div>
 </section>
 <section class="what-they-say-section">
@@ -236,7 +235,7 @@
         </p>
     </div>
     <div class="individual-sayings">
-        <div class="individual-sayings-divs tumbs">
+        <div class="individual-sayings-divs tumbs pop-on-scroll">
             <div class="individual-sayings-imgs">
                 <img src="cli.png" alt="">
             </div>
@@ -269,7 +268,7 @@
                 </p>
             </div>
         </div>
-        <div class="individual-sayings-divs tumbs">
+        <div class="individual-sayings-divs tumbs pop-on-scroll">
             <div class="individual-sayings-imgs">
                 <img src="pass.jpeg" alt="">
             </div>
@@ -301,7 +300,7 @@
                 </p>
             </div>
         </div>
-        <div class="individual-sayings-divs tumbs">
+        <div class="individual-sayings-divs tumbs pop-on-scroll">
             <div class="individual-sayings-imgs">
                 <img src="pass.jpeg" alt="">
             </div>
@@ -317,7 +316,7 @@
         </div>
     </div>
     <div class="say-img-holder">
-        <img id="what-they-say-image" src="edited%20(2).jpg" alt="">
+        <!-- <img id="what-they-say-image" src="edited%20(2).jpg" alt=""> -->
     </div>
 </section>
 <section class="subscription">
@@ -357,7 +356,7 @@
     </main>
     <footer>
         <section class="footer ">
-            <div class="footer-background"><img src="cicle.jpg" alt=""></div>
+            <!-- <div class="footer-background"><img src="cicle.jpg" alt=""></div> -->
             <div class="footer-div">
                 <div class="twist" id="first">
                     <a href="/"><div class="footer-logo" ><img src="re-logo.jpg" alt="Harvesterken logo"></div></a>
@@ -415,16 +414,18 @@
         <div class="btn">
             <button><i class="fa-solid fa-arrows-up-down"></i></button>
         </div>
-        <a href="https://wa.me/2349030861048" target="_blank">
-            <div class="btn-what">
-                <button><i class="fa-brands fa-whatsapp"></i></button>
-            </div>
-        </a> 
-        <a href="tel:+2349030861048" target="_blank">
-            <div class="btn-phone">
-                <button><i class="fa-solid fa-phone"></i></button>
-            </div>
-        </a> 
+        <div class="call-phone">
+            <a href="https://wa.me/2349030861048" target="_blank">
+                <div class="btn-what">
+                    <button><i class="fa-brands fa-whatsapp"></i></button>
+                </div>
+            </a> 
+            <a href="tel:+2349030861048" target="_blank">
+                <div class="btn-phone">
+                    <button><i class="fa-solid fa-phone"></i></button>
+                </div>
+            </a> 
+        </div>
     </footer>
     <script src="base.js"></script>
 </body>
