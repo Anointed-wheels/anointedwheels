@@ -142,6 +142,13 @@
   background-color: #262626;
   color: #f1f1f1;
   font-family: nunito;
+  display: block;
+  text-align: center;
+  justify-items: center;
+  align-content:space-evenly;
+}
+.flip-card-front h6{
+  text-decoration: underline;
 }
 
 .flip-card-back {
@@ -1329,6 +1336,18 @@
     left: 0;
     
     
+}
+.flip-card-front {
+  background-color: #262626;
+  color: #f1f1f1;
+  font-family: nunito;
+  display: block;
+  text-align: center;
+  justify-items: center;
+  align-content:space-evenly;
+}
+.flip-card-front h6{
+  text-decoration: underline;
 }
 .footer-div{
     position: absolute;
