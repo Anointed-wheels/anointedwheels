@@ -10,28 +10,7 @@ window.addEventListener("scroll",()=>{
   header.classList.toggle("shrink", window.scrollY > 50);
 });
 
-/* Mobile toggle */
-const hamburger = document.getElementById("hamburger");
-const sidePanel = document.getElementById("sidePanel");
-const page = document.getElementById("page");
-const overlay = document.getElementById("overlay");
-const closeBtn = document.getElementById("closeBtn");
 
-function openMenu(){
-  sidePanel.classList.add("active");
-  page.classList.add("shift");
-  overlay.classList.add("active");
-}
-
-function closeMenu(){
-  sidePanel.classList.remove("active");
-  page.classList.remove("shift");
-  overlay.classList.remove("active");
-}
-
-hamburger.addEventListener("click", openMenu);
-closeBtn.addEventListener("click", closeMenu);
-overlay.addEventListener("click", closeMenu);
 
 document.addEventListener("keydown",(e)=>{
   if(e.key === "Escape"){
@@ -131,3 +110,34 @@ dot.addEventListener("click",()=>{
 showSlide(index)
 })
 })
+
+const hamburger = document.getElementById("hamburger");
+const sidePanel = document.getElementById("sidePanel");
+const page = document.getElementById("page");
+const overlay = document.getElementById("overlay");
+
+function toggleMenu(){
+  const isOpen = sidePanel.classList.contains("active");
+
+  if(isOpen){
+    // Close menu
+    sidePanel.classList.remove("active");
+    page.classList.remove("shift");
+    overlay.classList.remove("active");
+
+    // Change hamburger back to normal icon
+    hamburger.innerHTML = `<span></span><span></span>`;
+  } else {
+    // Open menu
+    sidePanel.classList.add("active");
+    page.classList.add("shift");
+    overlay.classList.add("active");
+
+    // Change hamburger to cross
+    hamburger.innerHTML = `✕`;
+  }
+}
+
+// Use toggle function for hamburger and overlay
+hamburger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
