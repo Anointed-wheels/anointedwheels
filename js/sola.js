@@ -94,3 +94,40 @@ navLinks.forEach(link => {
 document.querySelectorAll(".mobile-menu li").forEach((item, index) => {
   item.style.transitionDelay = (index * 0.08) + "s";
 });
+
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll(".hero-dot")
+
+let current = 0
+
+function showSlide(index){
+
+slides.forEach(slide => slide.classList.remove("active"))
+dots.forEach(dot => dot.classList.remove("active"))
+
+slides[index].classList.add("active")
+dots[index].classList.add("active")
+
+current = index
+
+}
+
+function nextSlide(){
+
+current++
+
+if(current >= slides.length){
+current = 0
+}
+
+showSlide(current)
+
+}
+
+setInterval(nextSlide,6000)
+
+dots.forEach((dot,index)=>{
+dot.addEventListener("click",()=>{
+showSlide(index)
+})
+})
