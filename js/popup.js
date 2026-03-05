@@ -61,3 +61,17 @@ planForm.addEventListener("submit", e => {
   planModal.classList.remove("active");
   planForm.reset();
 });
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    // Collapse other open items
+    faqItems.forEach(i => {
+      if(i !== item) i.classList.remove("active");
+    });
+    // Toggle current item
+    item.classList.toggle("active");
+  });
+});
