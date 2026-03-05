@@ -1,0 +1,63 @@
+// Tilt effect (reuse from previous)
+document.querySelectorAll(".tilt").forEach(el => {
+  el.addEventListener("mousemove", e => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateX = -(y - rect.height/2)/12;
+    const rotateY = (x - rect.width/2)/12;
+    el.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  el.addEventListener("mouseleave", () => {
+    el.style.transform = "rotateX(0) rotateY(0)";
+  });
+});
+
+// Modal popup logic
+const planBtns = document.querySelectorAll(".plan-btn");
+const planModal = document.getElementById("planModal");
+const closeModal = document.getElementById("closeModal");
+const selectedPlanTitle = document.getElementById("selectedPlanTitle");
+const planForm = document.getElementById("planForm");
+
+// Open modal
+planBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const planName = btn.dataset.plan;
+    selectedPlanTitle.textContent = `Plan: ${planName}`;
+    planModal.classList.add("active");
+    planForm.dataset.plan = planName;
+  });
+});
+
+// Close modal
+closeModal.addEventListener("click", () => planModal.classList.remove("active"));
+planModal.addEventListener("click", e => {
+  if(e.target === planModal) planModal.classList.remove("active");
+});
+
+// Form submission
+planForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const plan = planForm.dataset.plan;
+  const firstName = planForm.firstName.value;
+  const surname = planForm.surname.value;
+  const email = planForm.email.value;
+  const phone = planForm.phone.value;
+  const sendTo = planForm.sendTo.value;
+
+  const message = `Hello, I would like to order the ${plan} plan.\nName: ${firstName} ${surname}\nEmail: ${email}\nPhone: ${phone}`;
+
+  if(sendTo === "whatsapp") {
+    const whatsappNumber = "2348012345678"; // EDIT company WhatsApp
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  } else if(sendTo === "email") {
+    const companyEmail = "info@harvesterken.com"; // EDIT company email
+    const url = `mailto:${companyEmail}?subject=Order ${plan} Plan&body=${encodeURIComponent(message)}`;
+    window.location.href = url;
+  }
+
+  planModal.classList.remove("active");
+  planForm.reset();
+});

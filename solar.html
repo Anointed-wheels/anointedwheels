@@ -222,11 +222,72 @@
     </div>
   </section>
 
+  <section class="plans-section">
+    <div class="container">
+      <h2 class="section-title">Our Plans</h2>
+      <div class="plans-grid">
 
+      <!-- Backup Plan -->
+        <div class="plan-card tilt">
+          <h3>Backup</h3>
+          <div class="price">₦<span>221,114</span></div>
+          <p class="plan-desc">Recommended for a 2 bedroom<br>No PV Panels<br>24 Months<br>Unlimited Maintenance</p>
+          <button class="plan-btn primary" data-plan="Backup">Order</button>
+        </div>
+
+      <!-- Baby Plan -->
+        <div class="plan-card tilt">
+          <h3>Baby</h3>
+          <div class="price">₦<span>203,820</span></div>
+          <p class="plan-desc">Recommended for a 2 bedroom<br>Save 20% over monthly billing<br>24 Months<br>Unlimited Maintenance</p>
+          <button class="plan-btn primary" data-plan="Baby">Order</button>
+        </div>
+
+      <!-- Popular Plan -->
+        <div class="plan-card tilt popular">
+          <h3>Popular</h3>
+          <div class="price">₦<span>257,966</span></div>
+          <p class="plan-desc">Recommended for 3 – 4 bedroom<br>Save 20% over monthly billing<br>24 Months<br>Unlimited Maintenance</p>
+          <button class="plan-btn primary" data-plan="Popular">Order</button>
+        </div>
+
+      <!-- Deluxe Plan -->
+        <div class="plan-card tilt">
+          <h3>Deluxe</h3>
+          <div class="price">₦<span>294,819</span></div>
+          <p class="plan-desc">Recommended for 5 bedroom<br>Save 20% over monthly billing<br>24 Months<br>Unlimited Maintenance</p>
+          <button class="plan-btn primary" data-plan="Deluxe">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="plan-modal" id="planModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">✕</span>
+      <h3>Order Plan</h3>
+      <p id="selectedPlanTitle">Plan: </p>
+      <form id="planForm">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="surname" placeholder="Surname" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="sendTo" required>
+          <option value="" disabled selected>Send message to</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="email">Email</option>
+        </select>
+        <button type="submit" class="hero-btn primary">Send</button>
+      </form>
+    </div>
+  </div>
+  </section>
   
 </div>
   <div class="scroll-progress"></div>
   <script src="../js/sola.js"></script>
   <script src="../js/aboutm1.js"></script>
+  <script src="../js/popup.js"></script>
 </body>
 </html>
