@@ -31,14 +31,21 @@ planBtns.forEach(btn => {
 });
 
 // Close modal
-closeModal.addEventListener("click", () => planModal.classList.remove("active"));
+if(closeModal){
+  closeModal.addEventListener("click", () => {
+    planModal.classList.remove("active");
+  });
+}
 planModal.addEventListener("click", e => {
   if(e.target === planModal) planModal.classList.remove("active");
 });
 
 // Form submission
+if(planForm){
 planForm.addEventListener("submit", e => {
+
   e.preventDefault();
+
   const plan = planForm.dataset.plan;
   const firstName = planForm.firstName.value;
   const surname = planForm.surname.value;
@@ -46,22 +53,35 @@ planForm.addEventListener("submit", e => {
   const phone = planForm.phone.value;
   const sendTo = planForm.sendTo.value;
 
-  const message = `Hello, I would like to order the ${plan} plan.\nName: ${firstName} ${surname}\nEmail: ${email}\nPhone: ${phone}`;
+  const message = `Hello, I would like to order the ${plan} plan.
+Name: ${firstName} ${surname}
+Email: ${email}
+Phone: ${phone}`;
 
-  if(sendTo === "whatsapp") {
-    const whatsappNumber = "2348012345678"; // EDIT company WhatsApp
+  if(sendTo === "whatsapp"){
+
+    const whatsappNumber = "2348012345678";
+
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  } else if(sendTo === "email") {
-    const companyEmail = "info@harvesterken.com"; // EDIT company email
+
+    window.open(url,"_blank");
+
+  } else {
+
+    const companyEmail = "info@harvesterken.com";
+
     const url = `mailto:${companyEmail}?subject=Order ${plan} Plan&body=${encodeURIComponent(message)}`;
+
     window.location.href = url;
+
   }
 
   planModal.classList.remove("active");
-  planForm.reset();
-});
 
+  planForm.reset();
+
+});
+}
 // FAQ Accordion
 const faqItems = document.querySelectorAll(".faq-item");
 

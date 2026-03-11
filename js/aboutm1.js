@@ -15,32 +15,12 @@ document.querySelectorAll(".about-image.tilt").forEach(el=>{
 
 // Learn More Button click
 const learnBtn = document.getElementById("learnMoreBtn");
-learnBtn.addEventListener("click", ()=>{
-  // redirect to about page (example)
-  window.location.href = "about.html";
-});
 
-// Optional: fade-up animation on scroll
-const aboutContent = document.querySelectorAll(".about-content, .about-image");
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-      entry.target.style.transition = "all 0.8s ease-out";
-      observer.unobserve(entry.target);
-    }
+if(learnBtn){
+  learnBtn.addEventListener("click", ()=>{
+    window.location.href = "about.html";
   });
-}, {threshold:0.2});
-
-aboutContent.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(20px)";
-  observer.observe(el);
-});
-
-
-
+}
 
 // Count up numbers when visible
 const stats = document.querySelectorAll(".stat .number");

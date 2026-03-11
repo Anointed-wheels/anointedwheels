@@ -51,7 +51,7 @@ window.location.href = mail;
 
 });
 
-const cards = document.querySelectorAll(".project-card img");
+const calls = document.querySelectorAll(".project-card img");
 const modal = document.getElementById("galleryModal");
 const modalImg = document.getElementById("galleryImg");
 
@@ -67,7 +67,7 @@ let images = [];
 
 /* STORE IMAGES */
 
-cards.forEach((img,index)=>{
+calls.forEach((img,index)=>{
 
 images.push(img.src);
 
