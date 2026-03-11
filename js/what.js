@@ -51,44 +51,107 @@ window.location.href = mail;
 
 });
 
-const cards = document.querySelectorAll(".project-card");
+const cards = document.querySelectorAll(".project-card img");
+const modal = document.getElementById("galleryModal");
+const modalImg = document.getElementById("galleryImg");
 
-const modal = document.getElementById("projectModal");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
 
-const modalImg = document.getElementById("modalImg");
+const closeBtn = document.querySelector(".close");
 
-const modalDesc = document.getElementById("modalDesc");
+let currentIndex = 0;
 
-const closeModal = document.querySelector(".close-modal");
+let images = [];
 
 
-cards.forEach(card=>{
+/* STORE IMAGES */
 
-card.addEventListener("click",()=>{
+cards.forEach((img,index)=>{
+
+images.push(img.src);
+
+img.addEventListener("click",()=>{
 
 modal.style.display="flex";
 
-modalImg.src = card.dataset.img;
+modalImg.src = img.src;
 
-modalDesc.textContent = card.dataset.desc;
-
-});
+currentIndex = index;
 
 });
 
+});
 
-closeModal.addEventListener("click",()=>{
+
+/* NEXT IMAGE */
+
+nextBtn.onclick = () =>{
+
+currentIndex++;
+
+if(currentIndex >= images.length){
+
+currentIndex = 0;
+
+}
+
+modalImg.src = images[currentIndex];
+
+};
+
+
+/* PREVIOUS IMAGE */
+
+prevBtn.onclick = () =>{
+
+currentIndex--;
+
+if(currentIndex < 0){
+
+currentIndex = images.length - 1;
+
+}
+
+modalImg.src = images[currentIndex];
+
+};
+
+
+/* CLOSE */
+
+closeBtn.onclick = () =>{
 
 modal.style.display="none";
 
-});
+};
 
 
-modal.addEventListener("click",(e)=>{
 
-if(e.target === modal){
+/* LOAD MORE PROJECTS */
 
-modal.style.display="none";
+document.getElementById("loadMoreBtn")
+.addEventListener("click",()=>{
+
+const grid = document.getElementById("projectsGrid");
+
+for(let i=0;i<3;i++){
+
+let div = document.createElement("div");
+
+div.className="project-card";
+
+div.innerHTML=`
+
+<img src="https://picsum.photos/500/${400+Math.random()*300}?random=${Math.random()}">
+
+<div class="overlay">
+<i class="fas fa-search-plus"></i>
+</div>
+
+`;
+
+grid.appendChild(div);
 
 }
 
