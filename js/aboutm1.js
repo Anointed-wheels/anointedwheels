@@ -31,7 +31,7 @@ const options = {
 
 const animateCount = (el) => {
   const target = parseFloat(el.dataset.target);
-  const increment = target / 200; // speed
+  const increment = target / 50; // speed
   let current = 0;
 
   const update = () => {

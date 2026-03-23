@@ -29,7 +29,7 @@ ${details}
 
 if(method === "whatsapp"){
 
-const number = "2340000000000";
+const number = "2347042419303";
 
 const url =
 `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
@@ -40,7 +40,7 @@ window.open(url,"_blank");
 
 if(method === "email"){
 
-const companyEmail = "info@harvesterken.com";
+const companyEmail = "harvesterkensolarenergyhr@gmail.com";
 
 const mail =
 `mailto:${companyEmail}?subject=Quote Request&body=${encodeURIComponent(message)}`;

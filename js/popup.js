@@ -60,7 +60,7 @@ Phone: ${phone}`;
 
   if(sendTo === "whatsapp"){
 
-    const whatsappNumber = "2348012345678";
+    const whatsappNumber = "2347042419303";
 
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
@@ -68,7 +68,7 @@ Phone: ${phone}`;
 
   } else {
 
-    const companyEmail = "info@harvesterken.com";
+    const companyEmail = "harvesterkensolarenergyhr@gmail.com";
 
     const url = `mailto:${companyEmail}?subject=Order ${plan} Plan&body=${encodeURIComponent(message)}`;
 
