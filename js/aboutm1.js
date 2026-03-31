@@ -18,7 +18,7 @@ const learnBtn = document.getElementById("learnMoreBtn");
 
 if(learnBtn){
   learnBtn.addEventListener("click", ()=>{
-    window.location.href = "about.html";
+    window.location.href = "solarabout.html";
   });
 }
 
