@@ -124,6 +124,28 @@ wrapper.addEventListener("touchmove", (e)=>{
   wrapper.scrollLeft = scrollLeft + walk;
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+        entry.target.style.transition = "all 0.7s ease";
+      }
+    });
+  },{threshold:0.2});
+
+  reveals.forEach(el=>{
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+    revealObserver.observe(el);
+  });
+
+});
+
 }
 
 const counters = document.querySelectorAll(".count");
