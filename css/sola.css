@@ -3155,3 +3155,494 @@ display:none;
   color: white;
 }
 
+/* SECTION BASE */
+.about-story{
+  padding:120px 20px;
+  position:relative;
+}
+
+.about-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* TEXT */
+.about-text h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.section-sub{
+  color:var(--accent);
+  margin-bottom:20px;
+}
+
+.about-text p{
+  opacity:.85;
+  margin-bottom:20px;
+  line-height:1.7;
+}
+
+/* VISUAL SIDE */
+.about-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.about-card{
+  background:linear-gradient(135deg,#111927,#0B131C);
+  padding:20px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.05);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+
+.about-card h4{
+  margin-bottom:5px;
+  color:var(--glow);
+}
+
+.about-card:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+/* Glow orb */
+.glow-orb{
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle, rgba(24,201,100,.4), transparent 70%);
+  top:-40px;
+  right:-40px;
+  z-index:-1;
+  animation:floatOrb 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb{
+  from{transform:translateY(-10px)}
+  to{transform:translateY(20px)}
+}
+
+/* GOAL BOX */
+.goal-box{
+  margin-top:80px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  padding:40px;
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--primary),var(--glow));
+  color:white;
+}
+
+.goal-box h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.goal-box p{
+  opacity:.95;
+  margin-bottom:25px;
+}
+
+/* LIGHT MODE */
+body.light .about-card{
+  background:#fff;
+  color:#111;
+}
+
+body.light .goal-box{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-container{
+    grid-template-columns:1fr;
+  }
+
+  .about-text{
+    text-align:center;
+  }
+
+  .about-visual{
+    align-items:center;
+  }
+}
+
+.testimonials-section{
+  padding:100px 20px;
+  position:relative;
+}
+
+.testimonial-wrapper{
+  display:flex;
+  gap:25px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:20px 10px;
+}
+
+.testimonial-wrapper::-webkit-scrollbar{
+  display:none;
+}
+
+.testimonial-card{
+  min-width:300px;
+  max-width:300px;
+  background:linear-gradient(135deg,#111927,#0B131C);
+  padding:25px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.05);
+  backdrop-filter:blur(12px);
+  transition:.4s;
+  flex-shrink:0;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 20px 50px rgba(24,201,100,.2);
+}
+
+.testimonial-card p{
+  font-size:14px;
+  opacity:.85;
+  margin:15px 0;
+  line-height:1.6;
+}
+
+.testimonial-card h4{
+  font-size:13px;
+  opacity:.7;
+}
+
+.stars{
+  color:gold;
+  font-size:14px;
+}
+
+/* CONTROLS */
+.testimonial-controls{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.arrow{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(135deg,var(--primary),var(--glow));
+  color:white;
+  font-size:18px;
+  transition:.3s;
+}
+
+.arrow:hover{
+  transform:scale(1.1);
+}
+
+/* LIGHT MODE */
+body.light .testimonial-card{
+  background:white;
+  color:#111;
+}
+
+body.light .arrow{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .testimonial-controls{
+    justify-content:center;
+  }
+
+  .testimonial-card{
+    min-width:260px;
+  }
+}
+
+.service-coverage{
+  padding:100px 20px;
+}
+
+.coverage-wrapper{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* TEXT */
+.coverage-content h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.coverage-intro{
+  opacity:.8;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+/* LIST */
+.coverage-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-bottom:40px;
+}
+
+.coverage-list h4{
+  color:var(--accent);
+  margin-bottom:5px;
+}
+
+.coverage-list p{
+  font-size:13px;
+  opacity:.7;
+}
+
+/* IMPACT */
+.coverage-impact{
+  display:flex;
+  gap:40px;
+  margin-bottom:30px;
+}
+
+.coverage-impact h3{
+  font-size:28px;
+  color:var(--glow);
+}
+
+.coverage-impact span{
+  font-size:12px;
+  opacity:.7;
+}
+
+/* IMAGE SIDE */
+.coverage-visual{
+  position:relative;
+}
+
+.coverage-visual img{
+  width:100%;
+  border-radius:20px;
+  filter:brightness(.85);
+}
+
+/* GLOW */
+.coverage-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(24,201,100,.2), transparent);
+}
+
+/* MARKERS */
+.marker{
+  position:absolute;
+  width:14px;
+  height:14px;
+  background:var(--glow);
+  border-radius:50%;
+  box-shadow:0 0 15px var(--glow);
+  animation:pulse 1.5s infinite;
+}
+
+.marker::after{
+  content:"";
+  position:absolute;
+  width:30px;
+  height:30px;
+  border:2px solid var(--glow);
+  border-radius:50%;
+  top:-8px;
+  left:-8px;
+  opacity:.4;
+  animation:ping 2s infinite;
+}
+
+/* POSITIONS */
+.marker.ibadan{ top:55%; left:45%; }
+.marker.lagos{ top:70%; left:35%; }
+.marker.abuja{ top:30%; left:55%; }
+
+/* ANIMATIONS */
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+  100%{transform:scale(1)}
+}
+
+@keyframes ping{
+  0%{transform:scale(0.6); opacity:.6;}
+  100%{transform:scale(1.8); opacity:0;}
+}
+
+/* LIGHT MODE */
+body.light .coverage-content{
+  color:#111;
+}
+
+body.light .coverage-visual img{
+  filter:none;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .coverage-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .coverage-impact{
+    justify-content:space-between;
+  }
+}
+
+.service-map{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.map-wrapper{
+  position:relative;
+  max-width:600px;
+  margin:50px auto;
+}
+
+/* SVG */
+.nigeria-map{
+  width:100%;
+  height:auto;
+}
+
+/* STATES */
+.state{
+  fill:#111927;
+  stroke:#444;
+  stroke-width:2;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.state:hover{
+  fill:var(--glow);
+  stroke:var(--accent);
+  transform:scale(1.02);
+  transform-origin:center;
+}
+
+/* ACTIVE CLICK */
+.state.active{
+  fill:var(--accent);
+}
+
+/* HIGHLIGHT */
+.state.highlight{
+  fill:rgba(24,201,100,0.4);
+}
+
+/* TOOLTIP */
+.map-tooltip{
+  position:absolute;
+  background:#0B131C;
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  font-size:13px;
+  pointer-events:none;
+  opacity:0;
+  transform:translate(-50%,-120%);
+  transition:.2s;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.map-tooltip.show{
+  opacity:1;
+}
+
+/* LIGHT MODE */
+body.light .state{
+  fill:#e5e7eb;
+  stroke:#999;
+}
+
+body.light .map-tooltip{
+  background:white;
+  color:#111;
+}
+
+/* MAP SECTION */
+.map-wrapper{
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+}
+
+.nigeria-map{
+  width: 100%;
+  height: auto;
+}
+
+/* STATES */
+.state{
+  fill: rgba(255,255,255,0.08);
+  stroke: rgba(255,255,255,0.3);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.state:hover{
+  fill: linear-gradient(45deg,#00ffcc,#00c3ff);
+  filter: drop-shadow(0 0 12px rgba(0,255,200,0.7));
+  transform: scale(1.05);
+}
+
+/* CLICK EFFECT */
+.state.active{
+  fill: #00ffc3;
+  filter: drop-shadow(0 0 20px #00ffc3);
+}
+
+/* TOOLTIP */
+.map-tooltip{
+  position: absolute;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+/* LIGHT MODE */
+body.light .state{
+  fill: rgba(0,0,0,0.05);
+  stroke: rgba(0,0,0,0.2);
+}
+
+body.light .map-tooltip{
+  background: #fff;
+  color: #000;
+}
