@@ -76,3 +76,40 @@ document.addEventListener("DOMContentLoaded", ()=>{
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", ()=>{
+
+  const items = document.querySelectorAll(".zkx9-item");
+  const modal = document.getElementById("zkx9-modal");
+  const modalImg = document.getElementById("zkx9-modal-img");
+
+  const title = document.getElementById("zkx9-modal-title");
+  const location = document.getElementById("zkx9-modal-location");
+  const desc = document.getElementById("zkx9-modal-desc");
+
+  const close = document.getElementById("zkx9-close");
+
+  items.forEach(item=>{
+    item.addEventListener("click", ()=>{
+
+      modal.style.display = "flex";
+
+      modalImg.src = item.querySelector("img").src;
+      title.textContent = item.dataset.title;
+      location.textContent = item.dataset.location;
+      desc.textContent = item.dataset.desc;
+
+    });
+  });
+
+  close.addEventListener("click", ()=>{
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", e=>{
+    if(e.target === modal){
+      modal.style.display = "none";
+    }
+  });
+
+});
