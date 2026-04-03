@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Harvesterken Energy</title>
+        <link rel="stylesheet" href="../css/sola.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dark">
+    
+    <div class="energy-bg"></div>
+    <div class="cursor-glow"></div>
+<div class="overlay" id="overlay"></div>
+
+<header class="header" id="header" style="z-index: 9999;">
+    <div class="nav-container">
+        
+        <div class="logo">
+            <img src="../images/indo.jpeg" alt="Harvesterken">
+    </div>
+    
+    <nav class="nav">
+        <ul class="menu">
+
+        <li><a href="solar.html">Home</a></li>
+        <li><a href="solarabout.html">About Us</a></li>
+
+        <!-- SERVICES -->
+        <li class="dropdown-parent">
+            <a href="#">Services</a>
+            <div class="dropdown">
+            <div class="dropdown-item nested-parent">
+              <a href="#">CCTV Installation ▸</a>
+              <div class="nested-dropdown">
+                <a href="#">Wired CCTV</a>
+                <a href="#">Wireless CCTV</a>
+                <a href="#">Industrial CCTV</a>
+              </div>
+            </div>
+            <a href="#">Solar Panel Installation</a>
+            <a href="#">Commercial Solar Tech</a>
+            <a href="#">Residential Solar Tech</a>
+            <div class="dropdown-item nested-parent">
+                <a href="#">Maintenance & Cleaning ▸</a>
+                <div class="nested-dropdown">
+                <a href="#">Panel Cleaning</a>
+                <a href="#">System Inspection</a>
+                <a href="#">Performance Upgrade</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- FAQ -->
+        <li class="dropdown-parent coricori">
+          <a href="#">FAQ</a>
+          <div class="dropdown">
+              <a href="#">General Questions</a>
+              <a href="#">Solar Installation</a>
+              <a href="#">CCTV Systems</a>
+              <a href="#">Maintenance</a>
+              <a href="#">Warranty & Support</a>
+          </div>
+        </li>
+        
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+        
+    </ul>
+</nav>
+
+<div class="actions">
+    <button id="themeToggle" class="theme-toggle">☀</button>
+    <a href="#" class="cta tilt">Contact Us</a>
+    
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+    </div>
+    </div>
+    
+</div>
+</header>
+
+<!-- MOBILE SIDE PANEL -->
+<div class="side-panel" id="sidePanel">
+    
+    <div class="close-btn" id="closeBtn">✕</div>
+    
+    <ul class="mobile-menu">
+    <li class="tola"><a href="solar.html">🏠 Home</a></li>
+    <li><a href="solarabout.html">ℹ️ About</a></li>
+    
+    <li class="mobile-accordion">
+        ⚡ Services
+        <div class="accordion-content">
+        <div>Solar Panel Installation</div>
+        <div>Commercial Solar Tech</div>
+        <div>Residential Solar Tech</div>
+        <div>CCTV Installation</div>
+        <div>Maintenance and Cleaning</div>
+    </div>
+</li>
+
+    <li class="mobile-accordion">
+      ❓ FAQ
+      <div class="accordion-content">
+        <div>General Questions</div>
+        <div>Solar Installation</div>
+        <div>CCTV Systems</div>
+        <div>Maintenance</div>
+    </div>
+    </li>
+    
+    <li><a href="gallery.html">Gallery</a></li>
+    <li>Contact</li>
+</ul>
+
+</div>
+
+<section class="faqx-hero">
+  <div class="faqx-hero-content">
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything you need to know about HARVESTERKEN solar solutions</p>
+
+    <div class="faqx-search-box">
+      <input type="text" id="faqxSearch" placeholder="Search questions...">
+    </div>
+  </div>
+</section>
+
+<section class="faqx-main">
+
+  <!-- CATEGORY FILTER -->
+  <div class="faqx-tabs">
+    <button class="faqx-tab active" data-cat="all">All</button>
+    <button class="faqx-tab" data-cat="solar">Solar</button>
+    <button class="faqx-tab" data-cat="install">Installation</button>
+    <button class="faqx-tab" data-cat="payment">Payment</button>
+    <button class="faqx-tab" data-cat="maint">Maintenance</button>
+  </div>
+
+  <!-- FAQ LIST -->
+  <div class="faqx-container">
+
+    <!-- ITEM -->
+    <div class="faqx-item" data-cat="solar">
+      <div class="faqx-question">
+        <h3>What are the advantages of choosing solar energy?</h3>
+        <span>+</span>
+      </div>
+      <div class="faqx-answer">
+        <p>
+          Solar energy reduces electricity bills, protects you from unstable power supply,
+          and gives you energy independence. At HARVESTERKEN, our systems are eco-friendly,
+          durable, and tailored to your specific energy needs.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqx-item" data-cat="install">
+      <div class="faqx-question">
+        <h3>How does solar panel installation work?</h3>
+        <span>+</span>
+      </div>
+      <div class="faqx-answer">
+        <p>
+          We start with site inspection, design your system, install panels,
+          connect inverters, and test everything to ensure optimal performance.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqx-item" data-cat="payment">
+      <div class="faqx-question">
+        <h3>What's the typical payback period?</h3>
+        <span>+</span>
+      </div>
+      <div class="faqx-answer">
+        <p>
+          Most HARVESTERKEN systems recover cost within 4–7 years depending on usage and setup.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqx-item" data-cat="maint">
+      <div class="faqx-question">
+        <h3>What maintenance is required?</h3>
+        <span>+</span>
+      </div>
+      <div class="faqx-answer">
+        <p>
+          Minimal. Occasional cleaning and inspection. We also offer maintenance plans.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqx-item" data-cat="payment">
+      <div class="faqx-question">
+        <h3>How long is the PPA?</h3>
+        <span>+</span>
+      </div>
+      <div class="faqx-answer">
+        <p>
+          Typically 24 months, ensuring predictable energy costs.
+        </p>
+      </div>
+    </div>
+
+    <div class="faqx-item" data-cat="payment">
+      <div class="faqx-question">
+        <h3>Can I own the system before the end of the PPA?</h3>
+        <span>+</span>
+      </div>
+      <div class="faqx-answer">
+        <p>
+          Yes, HARVESTERKEN provides flexible options for early ownership.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <footer class="footer">
+
+<div class="footer-container">
+
+<!-- COLUMN 1 -->
+
+<div class="footer-about">
+
+<div class="footer-logo">
+<img src="../images/indo.jpeg" alt="Harvesterken Logo">
+</div>
+
+<p>
+Harvesterken is a renewable energy company located in Ibadan, Nigeria.
+We specialize in Solar and Inverter installation, Backup Systems,
+and CCTV Camera installation.
+</p>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://wa.me/2347042419303"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+</div>
+
+
+<!-- COLUMN 2 -->
+
+<div class="footer-links">
+
+<h3>Quick Links</h3>
+
+<ul>
+<li><a href="solar.html">Home</a></li>
+<li><a href="solarabout.html">About Us</a></li>
+<li><a href="#">Plans</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="quote.html">Request Quote</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+
+<div class="footer-links">
+
+<h3>Our Services</h3>
+
+<ul>
+<li><a href="#">Solar Installation</a></li>
+<li><a href="#">Solar Maintenance</a></li>
+<li><a href="#">CCTV Camera Installation</a></li>
+<li><a href="#">Electrical Installation</a></li>
+<li><a href="#">Electric Fence Installation</a></li>
+</ul>
+
+</div>
+
+
+<!-- COLUMN 4 -->
+
+<div class="footer-contact">
+
+<h3>Contact Info</h3>
+
+<p>
+No 5' Salvation Army Drive,<br>
+Off Adamasingba Ibadan,<br>
+Oyo-State, Nigeria
+</p>
+
+<p>Email: harvesterkensolarenergyhr@gmail.com</p>
+
+<p>Phone: 07042419303</p>
+
+<p>Alt Phone: 07042419303</p>
+
+</div>
+
+
+<!-- COLUMN 5 -->
+
+<div class="footer-newsletter">
+
+<h3>Newsletter</h3>
+
+<p>Subscribe to get solar energy updates.</p>
+
+<div class="newsletter-box">
+
+<input type="email" placeholder="Your Email">
+
+<button>Subscribe</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 HARVESTERKEN. All Rights Reserved.
+
+</p>
+
+</div>
+
+  </footer>
+  
+</div>
+  <div class="scroll-progress" defer></div>
+  <script src="../js/sola.js" defer></script>
+  <script src="../js/aboutm1.js" defer></script>
+  <script src="../js/faq.js" defer></script>
+  <script src="../js/what.js" defer></script>
+</body>
+</html>
+
+
+
