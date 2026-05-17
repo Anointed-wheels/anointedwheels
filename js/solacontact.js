@@ -1,3 +1,41 @@
+/* =========================================
+   LOCATION SECTION REVEAL
+========================================= */
+
+const hxLocationItems = document.querySelectorAll(
+".hx-location-content, .hx-map-box"
+);
+
+const hxRevealLocation = () => {
+
+hxLocationItems.forEach(item=>{
+
+const top = item.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+item.style.opacity = "1";
+item.style.transform = "translateY(0)";
+
+}
+
+});
+
+};
+
+hxLocationItems.forEach(item=>{
+
+item.style.opacity = "0";
+item.style.transform = "translateY(80px)";
+item.style.transition = "1s ease";
+
+});
+
+window.addEventListener("scroll", hxRevealLocation);
+
+hxRevealLocation();
+
+
 /* CURSOR GLOW */
 
 const cursor = document.querySelector(".cursor-glow");
@@ -8,6 +46,8 @@ cursor.style.left = e.clientX + "px";
 cursor.style.top = e.clientY + "px";
 
 });
+
+
 
 /* 3D TILT */
 
