@@ -1,6 +1,6 @@
 /* =========================================================
    HARVESTERKEN — HAPPY CHRISTMAS & NEW YEAR INTERACTIVITY
-   Mobile timed display + auto-hide + reappear on scroll
+   Auto-hides after a set duration, then reappears on scroll
    ========================================================= */
 
 (function () {
@@ -12,36 +12,25 @@
     const expandBtn = document.getElementById("xmasExpandBtn");
     const sparkleLayer = document.querySelector(".xmas-sparkles");
 
-    const INITIAL_MOBILE_VISIBLE_MS = 5000; // Shown for 5s on mobile load
-    const SCROLL_MOBILE_VISIBLE_MS = 3500;  // Shown for 3.5s on scroll
+    const INITIAL_SHOW_MS = 10000; // Disappears after 4 seconds on load
+    const SCROLL_SHOW_MS = 10000;  // Reappears for 3 seconds when scrolling, then disappears again
     const MOBILE_BREAKPOINT = 768;
 
     let hideTimer = null;
-    let scrollDebounce = null;
+    let lastScrollY = window.scrollY || window.pageYOffset || 0;
 
     const isMobileView = () => window.innerWidth <= MOBILE_BREAKPOINT;
 
-    const showMobileTemporarily = (durationMs) => {
-      if (!isMobileView()) {
-        widget.classList.remove("mobile-hidden");
-        return;
-      }
-      widget.classList.remove("mobile-hidden");
+    const scheduleAutoHide = (durationMs) => {
       if (hideTimer) clearTimeout(hideTimer);
       hideTimer = setTimeout(() => {
-        if (isMobileView()) {
-          widget.classList.add("mobile-hidden");
-        }
+        widget.classList.add("is-faded-out");
       }, durationMs);
     };
 
-    const syncViewportMode = () => {
-      if (hideTimer) clearTimeout(hideTimer);
-      if (isMobileView()) {
-        showMobileTemporarily(INITIAL_MOBILE_VISIBLE_MS);
-      } else {
-        widget.classList.remove("mobile-hidden");
-      }
+    const showThenAutoHide = (durationMs) => {
+      widget.classList.remove("is-faded-out");
+      scheduleAutoHide(durationMs);
     };
 
     try {
@@ -69,25 +58,25 @@
         try {
           sessionStorage.setItem("hk_xmas_greeting_minimized", "false");
         } catch (err) {}
-        if (isMobileView()) {
-          showMobileTemporarily(SCROLL_MOBILE_VISIBLE_MS);
-        }
+        showThenAutoHide(SCROLL_SHOW_MS);
       });
     }
 
-    syncViewportMode();
+    // Start visible, then fade out automatically after INITIAL_SHOW_MS
+    showThenAutoHide(INITIAL_SHOW_MS);
 
-    const handleScroll = () => {
-      if (!isMobileView()) return;
-      if (scrollDebounce) clearTimeout(scrollDebounce);
-      scrollDebounce = setTimeout(() => {
-        showMobileTemporarily(SCROLL_MOBILE_VISIBLE_MS);
-      }, 80);
+    // Reappear when user scrolls, then fade out again after SCROLL_SHOW_MS
+    const onUserScroll = () => {
+      const currentY = window.scrollY || window.pageYOffset || 0;
+      if (Math.abs(currentY - lastScrollY) > 4 || currentY > 0) {
+        lastScrollY = currentY;
+        showThenAutoHide(SCROLL_SHOW_MS);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    document.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", syncViewportMode);
+    window.addEventListener("scroll", onUserScroll, { passive: true });
+    document.addEventListener("scroll", onUserScroll, { passive: true });
+    window.addEventListener("touchmove", onUserScroll, { passive: true });
 
     if (sparkleLayer && !sparkleLayer.dataset.populated) {
       sparkleLayer.dataset.populated = "true";

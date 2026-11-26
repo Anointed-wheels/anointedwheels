@@ -6,6 +6,7 @@
 <title>Harvesterken Energy</title>
 <link rel="icon" type="image/png" href="images/favilog.jpeg">
 <link rel="stylesheet" href="../css/sola.css">
+<link rel="stylesheet" href="seasonal.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="dark">
@@ -1156,10 +1157,78 @@ Oyo-State, Nigeria
   </footer>
   
 </div>
+
+  <!-- HARVESTERKEN SOLAR — HAPPY CHRISTMAS & NEW YEAR STICKY GREETING -->
+  <div class="xmas-sparkles" aria-hidden="true"></div>
+
+  <aside class="xmas-widget" id="xmasWidget" aria-label="Happy Christmas and New Year">
+    <button type="button" class="xmas-pill" id="xmasExpandBtn" title="Open Christmas & New Year Greeting">
+      <svg class="xmas-mini-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L14.8 8.2L21.5 9L16.5 13.6L18 20.2L12 16.8L6 20.2L7.5 13.6L2.5 9L9.2 8.2L12 2Z" fill="#FACC15"/>
+        <circle cx="5" cy="5" r="1.5" fill="#F87171"/>
+        <circle cx="19" cy="5" r="1.5" fill="#34D399"/>
+      </svg>
+      <span>Happy Christmas &amp; New Year</span>
+    </button>
+
+    <div class="xmas-card">
+      <div class="xmas-ribbon-top"></div>
+      <div class="xmas-sheen"></div>
+      <button type="button" class="xmas-close" id="xmasMinimizeBtn" aria-label="Minimize greeting">✕</button>
+
+      <div class="xmas-art">
+        <svg viewBox="0 0 96 96" class="xmas-svg">
+          <defs>
+            <linearGradient id="solarSunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FEF9C3"/>
+              <stop offset="50%" stop-color="#FACC15"/>
+              <stop offset="100%" stop-color="#F59E0B"/>
+            </linearGradient>
+            <linearGradient id="pineGradSolar" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#34D399"/>
+              <stop offset="60%" stop-color="#059669"/>
+              <stop offset="100%" stop-color="#064E3B"/>
+            </linearGradient>
+            <linearGradient id="rubyGradSolar" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FCA5A5"/>
+              <stop offset="55%" stop-color="#EF4444"/>
+              <stop offset="100%" stop-color="#991B1B"/>
+            </linearGradient>
+            <filter id="solarFestiveGlow" x="-25%" y="-25%" width="150%" height="150%">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
+
+          <circle cx="48" cy="48" r="41" fill="none" stroke="url(#solarSunGrad)" stroke-width="1" stroke-dasharray="4 5" class="xmas-orbit"/>
+          <circle cx="48" cy="48" r="21" fill="url(#solarSunGrad)" opacity="0.22" class="xmas-star-pulse"/>
+
+          <!-- Festive Solar Starburst + Holiday Tree Accent -->
+          <polygon points="48,25 31,49 65,49" fill="url(#pineGradSolar)"/>
+          <polygon points="48,38 26,63 70,63" fill="url(#pineGradSolar)"/>
+          <rect x="44" y="63" width="8" height="8" rx="1.5" fill="#D97706"/>
+
+          <circle cx="39" cy="54" r="3.2" fill="url(#rubyGradSolar)" class="xmas-twinkle"/>
+          <circle cx="57" cy="56" r="3.2" fill="#FDE047" class="xmas-twinkle-delay"/>
+          <circle cx="48" cy="45" r="3" fill="#38BDF8" class="xmas-twinkle"/>
+
+          <path d="M48 8 L51.4 15.8 L59.8 16.6 L53.4 22.1 L55.4 30.4 L48 25.9 L40.6 30.4 L42.6 22.1 L36.2 16.6 L44.6 15.8 Z" fill="url(#solarSunGrad)" filter="url(#solarFestiveGlow)" class="xmas-star-pulse"/>
+        </svg>
+      </div>
+
+      <div class="xmas-copy">
+        <span class="xmas-badge">HARVESTERKEN SOLAR • SEASON'S CHEER</span>
+        <h4>Happy Christmas &amp; New Year!</h4>
+        <p>Brighter days, steady power &amp; a joyful New Year for your home and business.</p>
+      </div>
+    </div>
+  </aside>
+
   <div class="scroll-progress" defer></div>
   <script src="../js/sola.js" defer></script>
   <script src="../js/aboutm1.js" defer></script>
   <script src="../js/popup.js" defer></script>
   <script src="../js/what.js" defer></script>
+  <script src="seasonal.js" defer></script>
 </body>
 </html>

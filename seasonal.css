@@ -1,6 +1,6 @@
 /* =========================================================
    HARVESTERKEN — HAPPY CHRISTMAS & NEW YEAR STYLES
-   Centered bottom placement + mobile auto-hide / scroll reveal
+   Centered bottom placement + timed fade-out + reappear on scroll
    ========================================================= */
 
 .xmas-sparkles {
@@ -36,7 +36,7 @@
   }
 }
 
-/* Centered Sticky Floating Anchor (Desktop & Default) */
+/* Centered Sticky Floating Anchor */
 .xmas-widget {
   position: fixed;
   bottom: 20px;
@@ -53,15 +53,15 @@
   visibility: visible;
   pointer-events: auto;
   touch-action: manipulation;
-  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s ease;
 }
 
-/* Hidden state used on mobile when timed out */
-.xmas-widget.mobile-hidden {
+/* Timed fade-out state (reappears when scrolling) */
+.xmas-widget.is-faded-out {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translate3d(-50%, 24px, 0) scale(0.96);
+  transform: translate3d(-50%, 26px, 0) scale(0.95);
 }
 
 /* Main Colorful Festive Glass Card */
@@ -151,7 +151,7 @@
 }
 
 .xmas-orbit {
-  transform-origin: 48px 50px;
+  transform-origin: 48px 48px;
   animation: xmasSpin 20s linear infinite;
 }
 
@@ -196,7 +196,7 @@
   font-weight: 800;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: #6EE7B7;
+  color: #FDE047;
 }
 
 .xmas-copy h4 {
@@ -290,14 +290,14 @@
   .xmas-widget {
     left: 50%;
     right: auto;
-    bottom: 68px;
+    bottom: 76px;
     transform: translate3d(-50%, 0, 0);
     width: calc(100% - 24px);
     max-width: 400px;
   }
 
-  .xmas-widget.mobile-hidden {
-    transform: translate3d(-50%, 24px, 0) scale(0.96);
+  .xmas-widget.is-faded-out {
+    transform: translate3d(-50%, 26px, 0) scale(0.95);
   }
 
   .xmas-card {
@@ -332,7 +332,7 @@
 
 @media (max-width: 380px) {
   .xmas-widget {
-    bottom: 64px;
+    bottom: 72px;
     width: calc(100% - 16px);
   }
 
