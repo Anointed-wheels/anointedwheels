@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +11,7 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="cleaning.css">
+    <link rel="stylesheet" href="seasonal.css">
     <link rel="icon" type="image/png" href="images/favilog.jpeg">
 
     
@@ -430,6 +427,73 @@
             </a> 
         </div>
     </footer>
+
+    <!-- HARVESTERKEN HAPPY CHRISTMAS & NEW YEAR STICKY GREETING -->
+    <div class="xmas-sparkles" aria-hidden="true"></div>
+
+    <aside class="xmas-widget" id="xmasWidget" aria-label="Happy Christmas and New Year">
+        <button type="button" class="xmas-pill" id="xmasExpandBtn" title="Open Christmas & New Year Greeting">
+            <svg class="xmas-mini-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.8 8.2L21.5 9L16.5 13.6L18 20.2L12 16.8L6 20.2L7.5 13.6L2.5 9L9.2 8.2L12 2Z" fill="#FACC15"/>
+                <circle cx="5" cy="5" r="1.5" fill="#F87171"/>
+                <circle cx="19" cy="5" r="1.5" fill="#34D399"/>
+            </svg>
+            <span>Happy Christmas &amp; New Year</span>
+        </button>
+
+        <div class="xmas-card">
+            <div class="xmas-ribbon-top"></div>
+            <div class="xmas-sheen"></div>
+            <button type="button" class="xmas-close" id="xmasMinimizeBtn" aria-label="Minimize greeting">✕</button>
+
+            <div class="xmas-art">
+                <svg viewBox="0 0 96 96" class="xmas-svg">
+                    <defs>
+                        <linearGradient id="pineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#34D399"/>
+                            <stop offset="55%" stop-color="#059669"/>
+                            <stop offset="100%" stop-color="#064E3B"/>
+                        </linearGradient>
+                        <linearGradient id="festiveGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FEF9C3"/>
+                            <stop offset="50%" stop-color="#FACC15"/>
+                            <stop offset="100%" stop-color="#D97706"/>
+                        </linearGradient>
+                        <linearGradient id="rubyOrnament" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FCA5A5"/>
+                            <stop offset="50%" stop-color="#EF4444"/>
+                            <stop offset="100%" stop-color="#991B1B"/>
+                        </linearGradient>
+                        <filter id="xmasGlow" x="-25%" y="-25%" width="150%" height="150%">
+                            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                        </filter>
+                    </defs>
+
+                    <circle cx="48" cy="50" r="41" fill="none" stroke="url(#festiveGold)" stroke-width="1" stroke-dasharray="3 5" class="xmas-orbit"/>
+                    <rect x="43" y="72" width="10" height="9" rx="2" fill="#92400E"/>
+                    <polygon points="48,22 28,48 68,48" fill="url(#pineGrad)"/>
+                    <polygon points="48,35 24,61 72,61" fill="url(#pineGrad)"/>
+                    <polygon points="48,48 20,74 76,74" fill="url(#pineGrad)"/>
+
+                    <circle cx="38" cy="54" r="3.4" fill="url(#rubyOrnament)" class="xmas-twinkle"/>
+                    <circle cx="58" cy="57" r="3.4" fill="#38BDF8" class="xmas-twinkle-delay"/>
+                    <circle cx="44" cy="67" r="3.8" fill="#FDE047" class="xmas-twinkle"/>
+                    <circle cx="56" cy="69" r="3.4" fill="url(#rubyOrnament)" class="xmas-twinkle-delay"/>
+
+                    <path d="M48 9 L51.2 16.5 L59.3 17.2 L53.1 22.5 L55 30.5 L48 26.2 L41 30.5 L42.9 22.5 L36.7 17.2 L44.8 16.5 Z" fill="url(#festiveGold)" filter="url(#xmasGlow)" class="xmas-star-pulse"/>
+                </svg>
+            </div>
+
+            <div class="xmas-copy">
+                <span class="xmas-badge">HARVESTERKEN • FESTIVE SEASON</span>
+                <h4>Happy Christmas &amp; New Year!</h4>
+                <p>Warmest wishes for joy, peace &amp; a sparkling New Year ahead.</p>
+            </div>
+        </div>
+    </aside>
+
     <script src="base.js"></script>
+    <script src="seasonal.js"></script>
 </body>
 </html>
